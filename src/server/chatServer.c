@@ -1,5 +1,9 @@
 #include "chatServer.h"
 
+/*
+* Handle Keyboard Interrupt
+* Use serverSocketDescriptor in global variable
+*/
 void clientInterruptHandler(int signo) {
     if(signo == SIGINT) {
         close(serverSocketDescriptor);
