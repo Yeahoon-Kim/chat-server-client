@@ -7,7 +7,7 @@
 #define CLIENT_RECV_ERROR_MSG "** Client : Error while receive message from server\n"
 #define CLIENT_SEND_ERROR_MSG "** Client : Error while send message to server\n"
 
-#define CLIENT_CONNECTION_MSG "Connected\n"
+#define CLIENT_CONNECTION_MSG "Connected"
 
 extern int clientSocketDescriptor;
 
