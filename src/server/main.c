@@ -1,12 +1,16 @@
 #include "chatServer.h"
 
+int serverSocketDescriptor;
+
 /*
 * Socket 통신을 위한 Server 프로그램 작성
 * Server : socket() -> bind() -> listen() -> accept() -> send() -> recv()
 * Client : socket() ->                connect() ->       recv() -> send() -> close()
 */
 int main(int argc, char *argv[]) {
-    int serverSocketDescriptor, clientSocketDescriptor;
+    int clientSocketDescriptor;
+
+    signal(SIGINT, clientInterruptHandler);
 
     // The server MUST take one command-line argument as a port number for the program
     if(argc != 2) {

@@ -1,5 +1,13 @@
 #include "chatServer.h"
 
+void clientInterruptHandler(int signo) {
+    if(signo == SIGINT) {
+        close(serverSocketDescriptor);
+        puts("");
+        exit(EXIT_SUCCESS);
+    }
+}
+
 /*
 * Print Correct Usage
 */

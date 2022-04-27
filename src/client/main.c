@@ -1,12 +1,14 @@
 #include "chatClient.h"
 
+int clientSocketDescriptor;
+
 /*
 * Socket 통신을 위한 Client 프로그램 작성
 * Server : socket() -> bind() -> listen() -> accept() -> send() -> recv()
 * Client : socket() ->                connect() ->       recv() -> send() -> close()
 */
 int main(int argc, char* argv[]) {
-    int clientSocketDescriptor;
+    signal(SIGINT, clientInterruptHandler);
 
     if(argc != 3) {
         printUsageError();

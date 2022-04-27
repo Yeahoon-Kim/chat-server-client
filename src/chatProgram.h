@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <signal.h>
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
@@ -7,10 +8,8 @@
 #include <arpa/inet.h>
 #include <netinet/in.h>
 
-#include <sys/select.h>
 #include <sys/socket.h>
 #include <sys/types.h>
-#include <sys/time.h>
 
 #define CREATE_SOCKET_ERROR_MSG "** Error while create socket\n"
 #define INIT_SOCKET_ERROR_MSG "** Error while initialize socket\n"

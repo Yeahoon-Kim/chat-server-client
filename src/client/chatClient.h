@@ -9,6 +9,10 @@
 
 #define CLIENT_CONNECTION_MSG "Connected\n"
 
+extern int clientSocketDescriptor;
+
+void clientInterruptHandler(int signo);
+
 void printUsageError();
 
 int socketInit(struct sockaddr_in* sockAddr, char* IP, char *port);

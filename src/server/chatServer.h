@@ -9,6 +9,9 @@
 
 #define SERVER_CONNECTION_MSG "Connection from %s:%hu\n"
 
+extern int serverSocketDescriptor;
+
+void clientInterruptHandler(int signo);
 
 void printUsageError();
 
