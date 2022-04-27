@@ -41,8 +41,4 @@
 * https://www.tuwlab.com/ece/27193
 * https://man7.org/linux/man-pages
 * https://aticleworld.com/socket-programming-in-c-using-tcpip/
-<<<<<<< HEAD
 * https://gitlab.com/gilgil/sns/-/wikis/git-exam/git-exam
-=======
-* https://gitlab.com/gilgil/sns/-/wikis/git-exam/git-exam
->>>>>>> 3106d2320034c310ff59f110869692461c74760c
