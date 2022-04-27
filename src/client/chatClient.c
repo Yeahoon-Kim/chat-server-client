@@ -1,6 +1,6 @@
 #include "chatClient.h"
 
-clientInterruptHandler(int signo) {
+void clientInterruptHandler(int signo) {
     if(signo == SIGINT) {
         close(clientSocketDescriptor);
         putchar('\n');
