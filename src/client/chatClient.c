@@ -82,7 +82,7 @@ int clientSocketSetting(int* clientSocketDescriptor, char* IP, char* port) {
 */
 int chattingClient(int clientSocketDescriptor) {
     char inBuf[MAX_BUF] = { 0 }, outBuf[MAX_BUF] = { 0 };
-    __uint8_t flag;
+    __int8_t flag;
 
     while( 1 ) {
         flag = sendMessage(clientSocketDescriptor, outBuf, MAX_BUF);

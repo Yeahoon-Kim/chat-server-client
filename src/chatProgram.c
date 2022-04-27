@@ -22,7 +22,7 @@ int recvMessage(int sockfd, char* buffer, int bufLen) {
 
     buffer[inputLength] = '\0';                             // Remove line feed character
 
-    puts(buffer);                                           // Print message on screen
+    fputs(buffer, stdout);                                           // Print message on screen
     if(!strncmp(buffer, "QUIT", 4)) return RECV_END;        // Quit connection
     else return RECV_SUCCESS;
 }

@@ -3,6 +3,7 @@
 # 최종 파일은 ../chatClient
 
 CC = gcc
+CFLAGS = -W -Wall
 OBJECTS = ../chatProgram.o chatClient.o main.o
 TARGET = chatClient
 

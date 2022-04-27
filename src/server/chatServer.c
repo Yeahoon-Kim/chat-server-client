@@ -99,7 +99,7 @@ int serverSocketSetting(int* serverSocketDescriptor, char* port) {
 */
 int chattingServer(int serverSocketDescriptor, int clientSocketDescriptor) {
     char inBuf[MAX_BUF] = { 0 }, outBuf[MAX_BUF] = { 0 };
-    __uint8_t flag;
+    __int8_t flag;
 
     while( 1 ) {
         flag = recvMessage(clientSocketDescriptor, inBuf, MAX_BUF);

@@ -3,6 +3,7 @@
 # 최종 파일은 ../chatClient
 
 CC = gcc
+CFLAGS = -W -Wall
 OBJECTS = ../chatProgram.o chatServer.o main.o
 TARGET = chatServer
 
@@ -10,7 +11,7 @@ TARGET = chatServer
 all: $(TARGET)
 
 main.o: ../chatProgram.h ../chatProgram.c chatServer.h chatServer.c main.c
-chatSErver.o: ../chatProgram.h ../chatProgram.c chatServer.h
+chatServer.o: ../chatProgram.h ../chatProgram.c chatServer.h
 
 $(TARGET): $(OBJECTS)
 	$(CC) $(CFLAGS) -o ../$(@) $(OBJECTS)
